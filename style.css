@@ -1,0 +1,562 @@
+@charset "utf-8";
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    font-family: serif;
+    font-size: 1em;
+    line-height: 2;
+    background-color: #f2ffdb;
+}
+p{
+    text-align: center;
+}
+.header{
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);/*濁らせる*/
+    position: sticky;/*position:fixdで固定すると変になった*/
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0 0 60% 60%;
+    height: 150px;
+    z-index: 700;
+}
+.nav ul{
+    display: flex;
+    padding: 0;
+}
+.nav li{
+    list-style: none;
+}
+.nav a{
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    line-height: 20px;
+    color: #525f3b;
+    font-weight: bold;
+}
+.nav a:hover{
+    color: #8fc631;
+}
+.reservation{
+    font-weight: bold;
+    display: block;
+    background-color: #a9d263;
+    color: #fff !important;
+    border-radius: 20px;
+}
+.reservation:hover{
+    background: #fff;
+    color: #a9d263 !important;
+    border: 1px solid #a9d263;
+}
+h1 img{
+    padding-bottom: 20px;
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.content{
+    margin: 7%;
+}
+.flex{
+    display: flex;
+}
+.flex3{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+h2{
+    text-align: center;
+}
+.mainCont{
+    position: relative;
+    background-color: #fff;
+    margin: 20% auto auto auto; 
+    width: 65%;
+    padding: 2%;
+    border: 1px solid #525f3b;
+}
+.mainContchild{
+    position: absolute;
+    top: -80px;
+    left: -40px;
+}
+.mainContchild2{
+    position: absolute;
+    top: 200px;
+    left: 830px;
+}
+.big{
+    font-size: 1.1em;
+}
+.ribonCont1{
+    position: relative;
+}
+.ribon{
+    width: 40%;
+    height: auto;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: -100;
+}
+.course{
+    background-color: #fff;
+}
+.courseBtn{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    text-decoration: none;
+    background-color: #525f3b;
+    color: #fff;
+    width: 70%;
+    padding: 3px;
+    border-radius: 20px;
+}
+.courseBtn:hover{
+    background-color: #fff;
+    color: #525f3b;
+    font-weight: bold !important;
+    border: 1px solid #525f3b;
+}
+h3{
+    text-align: center;
+    border-bottom: 1px solid #525f3b;
+}
+.course{
+    position: relative;
+    width: 25%;
+    height: 400px;
+    padding: 2%;
+    border: 1.5px solid #525f3b;
+}
+.course p{
+    text-align: center;
+}
+.instructor p{
+    background-color: #fff;
+    padding: 2%;
+}
+.key{
+    font-weight: bold;
+}
+.grid-container {
+    margin-bottom: 20%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+.item1,.item3{
+    border: 1px solid #525f3b;
+}
+.item1{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: #fff;
+}
+.item2{
+    width: 100%;
+    height: auto;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+.item3{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #fff;
+}
+.item4{
+    width: 100%;
+    height: auto;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.attachment,.attachment1{
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+    background-position: center center;
+    height: 450px;
+}
+.attachment {
+    background-image: url('images/index_4.jpg');
+}
+.attachment1 {
+    background-image: url('images/index_5.jpg');
+}
+/*pause.html*/
+.pauseImg{
+    position: absolute;
+    top: 50px;
+}
+.pause{
+    box-shadow: 2px 2px 4px;
+    width: 34%;
+    padding: 2%;
+    display: block;
+    background-color: #fff;
+    margin-bottom: 10%;
+}
+.pause h2{
+    margin-bottom: 0;
+}
+.pause h3{
+    margin-top: 0;
+}
+.pause img{
+    display: block;
+    margin: auto;
+}
+.pause dl{
+    display: flex;
+}
+.flex2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 45%;
+}
+/*流れる文字*/
+.bbs{
+  align-items: center;
+  color: #fff;
+  display: flex;
+  height: 200px;
+  line-height: 40px;
+  overflow:hidden;
+  width: 100%;
+  white-space:nowrap;
+  margin-top: 10%;
+  z-index: 1;
+}
+.bbs ul {
+  animation: flowing 70s linear infinite;
+  font-size: 8em;
+  transform:translateX(100%);
+  margin: 0;
+  padding: 0;
+}
+.bbs ul li{
+  display: inline-block;
+  padding-right: 10px;
+}
+@keyframes flowing {
+  0% { transform:translateX(0); }
+  100% { transform:translateX(-100%); }
+}
+/* スライド */
+.lp-slide {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+}
+.slide-img {
+  width: 100%;
+  object-fit: contain;
+}
+/* --------------------------------- */
+/* ここから矢印のデザインを変更するCSS */
+/* --------------------------------- */
+/* 矢印画像の高さと幅 */
+.swiper-button-prev,
+.swiper-button-next {
+  height: 50px;
+  width: 50px;
+}
+/* 矢印を消して画像に変更する */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "" !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+}
+/* 前に戻る矢印の画像パス */
+.swiper-button-prev::after {
+  background-image: url(images/yajirusi.png);
+}
+/* 次に進む矢印の画像パス */
+.swiper-button-next::after {
+  background-image: url(images/yajirusi_2.png);
+}
+/* --------------------------------- */
+/* 矢印をスライド画像の外に出すためのCSS */
+/* --------------------------------- */
+.slide-img_wrapper{
+  margin: 0 80px;
+}
+/* ページネーション位置 */
+.swiper-pagination {
+    position: relative !important;
+    top: 5px;
+}
+/*ページネーション色変更*/
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+    margin: 0 0 0 10px !important;
+    background: #000 !important;
+}
+.swiper-pagination-bullet:first-child {
+  margin: 0 !important;
+}
+/*アニメーション*/
+/*animation*/
+.imgWrap{
+   position: relative;
+   width: 100%;
+   margin-bottom: 60%;
+}
+.fadeImg{
+  position: absolute;
+  top: -70px;/*headerのところに食い込ませる*/
+  left: 0;
+  opacity: 0;
+  animation-name: fade_in_image;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+.fadeImg:nth-child(2){
+  animation-delay: 4s;
+}
+.fadeImg:nth-child(3){
+  animation-delay: 8s;
+}
+@keyframes fade_in_image{
+  0%{opacity: 0;}
+  10%{ opacity: 1;}
+  33%{opacity: 1; }
+  43%{ opacity: 0;}
+  100%{opacity: 0;}
+}
+/*footer*/
+.footer{ 
+    height: 112px;
+    position: relative;
+    text-align: center;
+    background-color: #a9d263;
+    color: #fff;
+    margin-top: 10%;
+}
+.footer p{
+    margin: 0;
+}
+.pagetop_arrow{
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid #525f3b;
+    border-right: 3px solid #525f3b;
+    transform: rotate(-45deg);
+}
+.pagetop{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 2px solid #525f3b;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    z-index: 1000;
+}
+/*区切りの波線*/
+.custom-shape-divider-bottom-1735544262 {
+    position: absolute;
+    bottom: 112px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+.custom-shape-divider-bottom-1735544262 svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+.custom-shape-divider-bottom-1735544262 .shape-fill {
+    fill: #a9d263;
+}
+#input{
+    display: none;
+}
+@media screen and (max-width:414px) {
+    h1 img{
+        width: 25%;
+    }
+    .header{
+        height: 95px;
+    }
+    .imgWrap{
+        margin-bottom: 150%;
+    }
+    .grid-container {
+        display: block;
+    }
+    .item2{
+        margin-bottom: 10%;
+    }
+    .item4{
+        margin-bottom: 40%;
+    }
+    .flex,.flex2,.flex3{
+        display: block;
+    }
+    .flex2{
+        margin-top: 140%;
+    }
+    .mainCont{
+        margin: 190% auto auto auto;
+        width: 90%;
+    }
+    .mainContchild{
+        position: absolute;
+        top: -300px;
+        left: 20px;
+        z-index: 500;
+    }
+    .mainContchild2{
+        position: absolute;
+        top: -260px;
+        left: 150px;
+    }
+    .explanation{
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+    .ribon{
+        width: 55%;
+        top: 95px;
+    }
+    .course{
+        display: block;
+        margin: 30px auto;
+        width: 95%;
+    }
+    .instructor p{
+        padding-top: 80px;
+    }
+    .instructor{
+        margin-top: 150px;
+        position: relative;
+    }
+    .instructor .flex img:nth-child(1){
+        position: absolute;
+        top: -100px;
+        left: 28px;
+    }
+    .instructor h2{
+        position: absolute;
+        top: 20px;
+        left: 5px;
+        z-index: 500;
+    }
+    .pause{
+        width: 85%;
+        margin: auto auto 10% auto;
+    }
+    .custom-shape-divider-bottom-1735544262 svg { 
+        width: calc(103% + 1.3px);
+        height: 69px; 
+    }
+    /* 矢印画像の高さと幅 */
+    .swiper-button-prev,
+    .swiper-button-next {
+        height: 25px;
+        width: 25px;
+    }
+    /* 矢印を消して画像に変更する */
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        height: 25px;
+        width: 25px;
+    }
+    .slide-img_wrapper{
+        margin: 0 40px;
+    }
+    .nav{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      left: 100%;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+      color: #000;
+      z-index: 100;
+      transition: 0.5s;
+    }
+    .open{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      background-color: #525f3b;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    .open span,.open span::before,.open span::after{
+      content: '';
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      position: absolute;
+      transition: 0.5s;
+    }
+    .open span::before{
+      bottom: 10px;
+    }
+    .open span::after{
+      top: 10px;
+    }
+    #input:checked~.open span{
+      background: rgba(255, 255, 255, 0);
+    }
+    #input:checked~.open span::before{
+      bottom: 0px;
+      transform: rotate(45deg);
+    }
+    #input:checked~.open span::after{
+      top: 0px;
+      transform: rotate(-45deg);
+    }
+    .nav ul{
+      display: block;
+    }
+    #input:checked~.nav{
+      left: 0;
+    }
+    #input{
+      display: none;
+    }
+}
