@@ -1,0 +1,158 @@
+@charset 'utf-8';
+@media screen and (max-width:767px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+  .flex-between{
+    display: block;
+  }
+  .flex{
+    display: block;
+  }
+  .float-img{
+    width: 60%;
+    margin-top: 10%;
+    margin-left: 15%;
+  }
+  .scrollbar-text{
+    bottom: 70px;
+  }
+  .scrollbar::after{
+    bottom: 70px;
+  }
+  .img-wrap{
+    margin-bottom: 80%;
+  }
+  .picup{
+    width: 100%;
+    margin: 10% auto;
+  }
+  .step-cont{
+    display: block;
+    margin: 25% auto;
+  }
+  .step-cont img{
+    display: block;
+    margin: auto;
+  }
+  .step{
+    top: -30px;
+    left: 25px;
+  }
+  .step-num{
+    top: -75px;
+    left: 50px;
+  }
+  .news{
+    width: 100%;
+    padding: 0;
+  }
+  .footer img{
+    display: block;
+    margin: auto;
+  }
+  .footer .flex{
+    text-align: center;
+    display: block;
+    margin: auto;
+  }
+  .header{
+    padding: 0;
+  }
+  .logo{
+    width: 30%;
+    margin-left: 30px;
+  }
+  .nav-ja{
+    display: inline;
+  }
+  /*ハンバーガーメニュー*/
+  .head-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    left: 100%;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    color: #000;
+    z-index: 100;
+    line-height: 3;
+    transition: 0.5s;
+    border-radius: 0;
+  }
+  .head-nav ul{
+    padding: 0;
+    display: block;
+    width: 100%;
+  }
+  .head-nav li{
+    border-bottom: 1px solid #1e1ecc;
+    padding: 5px;
+    text-align: left;
+  }
+  .head-nav li:hover{
+    border-bottom: 2px solid #1e1ecc;
+  }
+
+  .head-nav li:hover a{
+    color: #1e1ecc;
+  }
+  .nav-en{
+    text-align: left;
+    margin: 10px;
+    display: inline;
+  }
+  .open{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #1e1ecc;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .open span,.open span::before,.open span::after{
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    transition: 0.5s;
+  }
+  .open span::before{
+    bottom: 10px;
+  }
+  .open span::after{
+    top: 10px;
+  }
+  #input:checked~.open span{
+    background: rgba(255, 255, 255, 0);
+  }
+  #input:checked~.open span::before{
+    bottom: 0px;
+    transform: rotate(45deg);
+  }
+  #input:checked~.open span::after{
+    top: 0px;
+    transform: rotate(-45deg);
+  }
+  .head-nav ul{
+    display: block;
+  }
+  #input:checked~.head-nav{
+    left: 0;
+  }
+  #input{
+    display: none;
+  }
+}
